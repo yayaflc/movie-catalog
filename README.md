@@ -32,4 +32,4 @@
 
 
 <br>
-<p align="center"><a align='center'><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"></a></p>
+<p align="center"><a align='center' href="https://movie-catalog-frameteca.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"></a></p>
