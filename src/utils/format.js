@@ -11,6 +11,24 @@ export function formatYear(releaseDate) {
   return year;
 }
 
+export function formatReleaseDate(releaseDate) {
+  if (!releaseDate || typeof releaseDate !== "string" || releaseDate.length < 10) return null;
+  const [year, month, day] = releaseDate.split("-").map(Number);
+  if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) {
+    return null;
+  }
+  const date = new Date(year, month - 1, day);
+  if (Number.isNaN(date.getTime())) return null;
+  const parts = date
+    .toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" })
+    .split(" de ");
+  if (parts.length === 3) {
+    parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1);
+    return parts.join(" de ");
+  }
+  return date.toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" });
+}
+
 export function formatRuntime(minutes) {
   if (minutes == null || !Number.isFinite(Number(minutes))) return null;
   const m = Number(minutes);

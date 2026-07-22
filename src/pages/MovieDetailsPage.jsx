@@ -6,7 +6,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import CrewList from "../components/CrewList";
 import SimilarMovies from "../components/SimilarMovies";
 import useMovieDetails from "../hooks/useMovieDetails";
-import { formatRating, formatYear, formatRuntime } from "../utils/format";
+import { formatRating, formatReleaseDate, formatRuntime } from "../utils/format";
 import { posterUrl } from "../utils/images";
 
 export default function MovieDetailsPage() {
@@ -23,7 +23,7 @@ export default function MovieDetailsPage() {
 
   const poster = movie ? posterUrl(movie.poster_path) : null;
   const ratingLabel = movie ? formatRating(movie.vote_average) : null;
-  const year = movie ? formatYear(movie.release_date) : null;
+  const releaseDateLabel = movie ? formatReleaseDate(movie.release_date) : null;
   const runtimeLabel = movie ? formatRuntime(movie.runtime) : null;
   const genres = movie?.genres?.map((g) => g.name).filter(Boolean) || [];
   const cast = movie?.credits?.cast || [];
@@ -103,9 +103,9 @@ export default function MovieDetailsPage() {
                       <span>{ratingLabel}</span>
                     </span>
                   ) : null}
-                  {ratingLabel && year ? <span>|</span> : null}
-                  {year ? <span>{year}</span> : null}
-                  {(ratingLabel || year) && runtimeLabel ? <span>|</span> : null}
+                  {ratingLabel && releaseDateLabel ? <span>|</span> : null}
+                  {releaseDateLabel ? <span>{releaseDateLabel}</span> : null}
+                  {(ratingLabel || releaseDateLabel) && runtimeLabel ? <span>|</span> : null}
                   {runtimeLabel ? <span>{runtimeLabel}</span> : null}
                 </div>
 
