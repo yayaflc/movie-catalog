@@ -1,16 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+﻿import AppRoutes from './routes/AppRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-white">
-      Movie Catalog
-    </div>
-    </>
-  )
+  return <AppRoutes />
 }
 
 export default App
