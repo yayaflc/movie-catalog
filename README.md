@@ -1,29 +1,35 @@
-# Catálogo de Filmes (TMDB)
+# <p align="center"> frameteca 📽
 
-Aplicação React que consome a API The Movie Database (TMDB).
+<p align='center'><i> feito com React, integrado com a API The Movie Database (TMDB). </i>
 
-## Pré-requisitos
+<br>
+
+### Pré-requisitos
 
 - Node.js 18 ou superior
 
-## Token da API TMDB
+### Token da API TMDB
 
 1. Crie conta no portal de desenvolvedores do TMDB.
 2. Em Settings > API, copie o API Read Access Token (Bearer).
 
-## Configuração
+### Configuração
 
 1. Copie .env.example para .env
 2. Defina VITE_TMDB_API_TOKEN
 3. Opcional: VITE_TMDB_LANGUAGE (padrão pt-BR)
 
-## Instalação
+### Instalação
 
-npm install
-npm run dev
-npm run build
+- npm install
+- npm run build
+- npm run dev
 
-## Rotas
+### Rotas
 
 - `/` — Home (catálogo de filmes)
 - `/movie/:id` — Detalhes do filme
+
+
+<br>
+<p align="center"><a align='center'><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"></a></p>
